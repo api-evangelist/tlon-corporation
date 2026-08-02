@@ -1,0 +1,75 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://github.com/tloncorp/tlon-mcp-server
+description: >-
+  Tlon MCP Server — an open-source Model Context Protocol server (first-party,
+  tloncorp GitHub org) that exposes tools for interacting with Tlon Messenger
+  agents over a running Urbit ship. Self-hosted; stdio (default) or http transport.
+  Configured with the ship URL/name and +code access code. A companion `mcp`
+  Hoon agent (tloncorp/mcp) acts as an MCP proxy and OAuth grant-cache on the ship.
+server:
+  name: tlon-mcp
+  repo: https://github.com/tloncorp/tlon-mcp-server
+  transport: stdio        # stdio (default) or http
+  hosting: self-hosted
+  runtime: node>=16
+  config:
+    - URBIT_URL      # full Urbit ship URL (preferred)
+    - URBIT_SHIP     # ship name without ~
+    - URBIT_CODE     # ship +code access code
+    - MCP_TRANSPORT  # stdio | http
+    - PORT           # MCP server port (http mode)
+related:
+  - name: Urbit MCP (on-ship agent)
+    repo: https://github.com/tloncorp/mcp
+    description: MCP proxy and OAuth grant-cache Gall agent running on the Urbit ship.
+tools:
+  - name: send-dm
+    description: Send a direct message to another ship by ship ID or nickname.
+  - name: read-dm-history
+    description: Retrieve recent messages from a direct-message channel.
+  - name: list-contacts
+    description: Get contacts with their nicknames and ship IDs.
+  - name: create-group
+    description: Create a new group owned by your ship.
+  - name: list-groups
+    description: List all groups you are a member of.
+  - name: get-group-info
+    description: Get metadata, channels, and member count for a group.
+  - name: list-group-members
+    description: List all members of a group with their roles.
+  - name: invite-to-group
+    description: Invite one or more ships to a group.
+  - name: assign-role
+    description: Assign a role to a group member.
+  - name: remove-role
+    description: Remove a role from a group member.
+  - name: create-channel
+    description: Create a chat, notebook, or gallery channel in a group.
+  - name: list-channels
+    description: List all channels in a group.
+  - name: get-channel-info
+    description: Get metadata about a specific channel.
+  - name: read-channel-history
+    description: Fetch recent messages from a channel.
+  - name: send-to-channel
+    description: Send a message to a channel.
+  - name: react-to-post
+    description: Add an emoji reaction to a post.
+  - name: unreact-to-post
+    description: Remove your reaction from a post.
+  - name: edit-post
+    description: Edit an existing post's content.
+  - name: delete-post
+    description: Delete a post from a channel.
+  - name: get-activity
+    description: Fetch recent activity and notifications (mentions/replies).
+  - name: get-unreads
+    description: Get unread message counts across all channels.
+  - name: get-profile
+    description: Fetch another ship's profile information.
+  - name: get-my-profile
+    description: Get your own profile information.
+  - name: update-profile
+    description: Update your own profile fields (nickname, bio, status, avatar, cover).

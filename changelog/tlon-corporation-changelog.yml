@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://tlon.io/changelog
+description: >-
+  Tlon Messenger ships two release tracks — Webapp and Native (iOS/Android) —
+  each versioned with semver and dated in Urbit's ~YYYY.MM.DD notation. Recent
+  window captured from the public changelog; the live page is the source of truth.
+scheme: semver-per-track
+tracks:
+  - Webapp
+  - Native
+current:
+  webapp: 12.0.0
+  native: 9.3.0
+entries:
+  - version: Webapp v12.0.0
+    date: '2026-07-20'
+    track: webapp
+  - version: Native v9.3.0
+    date: '2026-07-14'
+    track: native
+  - version: Native v9.2.0
+    date: '2026-07-08'
+    track: native
+  - version: Webapp v11.4.0
+    date: '2026-07-02'
+    track: webapp
+  - version: Native v9.1.0
+    date: '2026-06-22'
+    track: native
+  - version: Native v9.0.1
+    date: '2026-06-12'
+    track: native
+  - version: Native v9.0.0
+    date: '2026-06-02'
+    track: native
+    breaking: true
+  - version: Native v8.3.3
+    date: '2026-05-27'
+    track: native
+  - version: Native v8.3.2
+    date: '2026-05-19'
+    track: native
+  - version: Native v8.3.1
+    date: '2026-05-04'
+    track: native
+  - version: Webapp v11.2.2
+    date: '2026-05-04'
+    track: webapp
+  - version: Native v8.3.0
+    date: '2026-04-24'
+    track: native

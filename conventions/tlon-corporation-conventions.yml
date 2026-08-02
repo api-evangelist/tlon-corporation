@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/tloncorp/api-beta
+docs: https://docs.urbit.org
+description: >-
+  Cross-cutting request/response semantics for building on Tlon Messenger via the
+  Urbit ship HTTP API (Eyre channels), as exposed by @tloncorp/api, @urbit/http-api,
+  and the Tlon MCP Server. The API is served by each user's own ship, not a single
+  multi-tenant gateway.
+authentication:
+  style: session-cookie
+  flow: >-
+    Client presents the ship's +code access code to the ship's /~/login endpoint
+    and receives a session cookie (urbauth-~ship). @tloncorp/api takes shipName,
+    shipUrl, and an async getCode() supplier.
+  per_ship: true
+  notes: The +code is a ship-level secret; there is no OAuth scope model on the base channel API.
+addressing:
+  ships: "Urbit @p ship IDs, e.g. ~sampel-palnet (with leading ~)."
+  channels: "channel 'nest', e.g. chat/~sampel-palnet/general"
+  groups: "group 'flag', e.g. ~sampel-palnet/weekend-projects"
+  post_ids: "@ud values written with dots (e.g. 170.141.184...)"
+transport:
+  model: eyre-channel
+  description: >-
+    State-changing calls are 'pokes' and subscriptions are opened over a channel
+    (PUT to /~/channel/<uid>); the ship streams updates back as server-sent events
+    (GET on the same channel). @urbit/http-api manages the channel, acks, and reconnects.
+  content_type: application/json
+idempotency:
+  supported: false
+  notes: >-
+    The channel poke API is not idempotency-keyed; a retried send re-posts.
+    De-duplicate at the caller before retrying writes.
+pagination:
+  style: event-stream + count/limit
+  notes: >-
+    Real-time data arrives via the channel SSE subscription. History reads take a
+    count/limit (e.g. read-dm-history count default 100 max 500; read-channel-history
+    default 50 max 100) rather than cursor tokens.
+versioning:
+  scheme: kelvin
+  notes: >-
+    Urbit uses Kelvin versioning for the kernel/interfaces (versions decrement toward
+    a frozen 0). Userspace desk versions follow their own release cadence.
+error_handling:
+  notes: >-
+    Errors surface as HTTP status codes on the channel/scry endpoints plus ship-side
+    'nack' on failed pokes; there is no RFC 9457 problem+json envelope on the base API.
+rate_limits:
+  notes: Governed per-ship by the host (Eyre); no documented global public rate-limit headers.
+cross_reference:
+  authentication: null
+  errors: null
+  lifecycle: null

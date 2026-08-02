@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/org/tloncorp
+description: >-
+  First-party client libraries for building on Tlon's Urbit applications. The
+  developer surface is the Urbit ship HTTP API (Eyre channels); these TypeScript
+  libraries wrap it. @tloncorp/api is the high-level client for Tlon Messenger
+  data (groups, channels, contacts, activity); @urbit/http-api is the low-level
+  channel client for any Urbit ship; @tloncorp/mock-http-api mocks a ship for tests.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@tloncorp/api"
+    url: https://www.npmjs.com/package/@tloncorp/api
+    install: npm install @tloncorp/api
+    repository: https://github.com/tloncorp/api-beta
+    description: TypeScript API client for Tlon's Urbit applications (Tlon Messenger).
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/http-api"
+    url: https://www.npmjs.com/package/@urbit/http-api
+    install: npm install @urbit/http-api
+    version: 2.3.0
+    repository: https://github.com/urbit/urbit
+    description: Library to interact with an Urbit ship over HTTP (Eyre channel API).
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@tloncorp/mock-http-api"
+    url: https://www.npmjs.com/package/@tloncorp/mock-http-api
+    install: npm install @tloncorp/mock-http-api
+    repository: https://github.com/tloncorp/mock-http-api
+    description: Library to mock interactions with an Urbit ship for testing.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@tloncorp/tlon-skill"
+    url: https://www.npmjs.com/package/@tloncorp/tlon-skill
+    install: npm install @tloncorp/tlon-skill
+    repository: https://github.com/tloncorp/tlon-skill
+    description: Tlon/Urbit skill for OpenClaw agents (packaged agent skill; see skills/).
+    official: true

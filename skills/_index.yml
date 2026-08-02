@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: generated
+source: https://github.com/tloncorp/tlon-mcp-server
+note: >-
+  Tlon publishes a first-party OpenClaw agent skill as @tloncorp/tlon-skill
+  (repo tloncorp/tlon-skill). The packaged skill below is grounded in the real
+  operation surface of the Tlon MCP Server and the @tloncorp/api client.
+skills:
+  - file: tlon-corporation-messaging.md
+    name: Message and manage groups on Tlon Messenger
+    api: mcp/tlon-corporation-mcp.yml
+    operations:
+      - send-dm
+      - read-dm-history
+      - list-contacts
+      - list-groups
+      - create-channel
+      - send-to-channel
+      - read-channel-history
+      - get-activity
+      - get-unreads
+published_skills:
+  - name: "@tloncorp/tlon-skill"
+    type: OpenClaw skill
+    url: https://www.npmjs.com/package/@tloncorp/tlon-skill
+    repo: https://github.com/tloncorp/tlon-skill

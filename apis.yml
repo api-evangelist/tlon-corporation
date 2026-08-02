@@ -1,22 +1,121 @@
 aid: tlon-corporation
 name: Tlon Corporation
-description: Tlon Corporation is a company surfaced as a portfolio company of a16z and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Tlon Corporation builds Tlon Messenger, a self-owned, self-hosted social
+  messaging app that runs on the user's own Urbit ship, and Tlon Hosting, which
+  runs managed ships under tlon.network. Every account ships with Tlonbot, an
+  OpenClaw-powered AI agent. Developers integrate through the Urbit ship HTTP API
+  (Eyre channels) using the @tloncorp/api and @urbit/http-api TypeScript clients,
+  and through the first-party Tlon MCP Server that exposes messaging, groups,
+  channels, and profile tools to agents. Backed by a16z.
 url: https://raw.githubusercontent.com/api-evangelist/tlon-corporation/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-public-surface
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://tlon.io/apple-touch-icon.png
 tags:
 - Company
-apis: []
+- Messaging
+- Social
+- Urbit
+- Self-Hosting
+- Decentralization
+- Agents
+- MCP
+- Chat
+- Hosting
+apis:
+- aid: tlon-corporation:urbit-http-api
+  name: Urbit HTTP API (Tlon)
+  humanURL: https://docs.urbit.org
+  baseURL: https://tlon.network
+  tags:
+  - Messaging
+  - Urbit
+  - HTTP API
+  description: >-
+    The Urbit ship HTTP API (Eyre channels) that powers Tlon Messenger. Clients
+    authenticate to a ship with its +code access code, then poke and subscribe
+    over a channel to send/read messages, manage groups and channels, and read
+    activity. Wrapped by @tloncorp/api and @urbit/http-api.
+  properties:
+  - url: https://docs.urbit.org
+    type: Documentation
+  - url: https://github.com/tloncorp/api-beta
+    type: APIReference
+  - url: conventions/tlon-corporation-conventions.yml
+    type: Conventions
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/tlon-corporation-domain-security.yml
+- type: Website
+  url: https://tlon.io
+- type: DeveloperPortal
+  url: https://docs.urbit.org
+- type: Documentation
+  url: https://docs.urbit.org
+- type: APIReference
+  url: https://github.com/tloncorp/api-beta
+- type: GettingStarted
+  url: https://docs.urbit.org/get-on-urbit
+- type: GitHubOrganization
+  url: https://github.com/tloncorp
+- type: Blog
+  url: https://tlon.io/posts
+- type: ChangeLog
+  url: https://tlon.io/changelog
+- type: ChangeLog
+  url: changelog/tlon-corporation-changelog.yml
+- type: Support
+  url: https://tlon.io/posts/faq
+- type: SignUp
+  url: https://tlon.network/login
+- type: TermsOfService
+  url: https://tlon.io/terms
+- type: PrivacyPolicy
+  url: https://tlon.io/privacy
+- type: Twitter
+  url: https://twitter.com/tloncorporation
+- type: Packages
+  url: packages/tlon-corporation-packages.yml
+- type: SDKs
+  url: packages/tlon-corporation-packages.yml
+- type: MCPServer
+  url: mcp/tlon-corporation-mcp.yml
+  name: Tlon MCP Server
+  description: >-
+    First-party open-source MCP server (tloncorp/tlon-mcp-server) exposing ~30
+    tools for Tlon Messenger over a running Urbit ship; stdio or http transport.
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/tlon-corporation-llms.txt
+- type: Conventions
+  url: conventions/tlon-corporation-conventions.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

@@ -1,0 +1,40 @@
+# Tlon Corporation
+
+> Tlon Corporation builds Tlon Messenger — a self-owned, self-hosted social messaging
+> app that runs on the user's own Urbit ship — and Tlon Hosting, which runs managed
+> ships. Every account includes Tlonbot, an OpenClaw-powered AI agent. Developers
+> integrate through the Urbit ship HTTP API (Eyre channels) via the @tloncorp/api and
+> @urbit/http-api TypeScript clients, and through the first-party Tlon MCP Server for
+> agent access. This is an API Evangelist catalog profile, generated from the provider's
+> public developer surface (github.com/tloncorp, npm, docs.urbit.org).
+
+## Products
+- [Tlon Messenger](https://tlon.io): Own your messenger, own your agent — self-hosted social messaging on Urbit.
+- [Tlon Hosting](https://tlon.network): Managed Urbit ship hosting (sign in / new accounts).
+
+## Developer surface
+- [GitHub organization](https://github.com/tloncorp): 37+ repos — apps, clients, MCP server, agent skills.
+- [Documentation (Urbit)](https://docs.urbit.org): Developer reference for Urbit OS and the ship HTTP API.
+- [Get on Urbit](https://docs.urbit.org/get-on-urbit): Getting started with a ship.
+- [@tloncorp/api](https://www.npmjs.com/package/@tloncorp/api): TypeScript client for Tlon's Urbit apps.
+- [@urbit/http-api](https://www.npmjs.com/package/@urbit/http-api): Low-level Urbit ship HTTP (Eyre channel) client.
+
+## Agents
+- [Tlon MCP Server](https://github.com/tloncorp/tlon-mcp-server): Model Context Protocol server exposing ~30 tools for messaging, groups, channels, activity, and profiles.
+- [@tloncorp/tlon-skill](https://www.npmjs.com/package/@tloncorp/tlon-skill): First-party OpenClaw agent skill for Tlon Messenger.
+- [Urbit MCP agent](https://github.com/tloncorp/mcp): On-ship MCP proxy and OAuth grant-cache Gall agent.
+
+## Catalog artifacts (this repo)
+- Packages / SDKs: packages/tlon-corporation-packages.yml
+- MCP server: mcp/tlon-corporation-mcp.yml
+- Agent skill: skills/tlon-corporation-messaging.md
+- API conventions: conventions/tlon-corporation-conventions.yml
+- Domain security: security/tlon-corporation-domain-security.yml
+
+## Company
+- [Blog](https://tlon.io/posts)
+- [Changelog](https://tlon.io/changelog)
+- [FAQ](https://tlon.io/posts/faq)
+- [Terms](https://tlon.io/terms)
+- [Privacy](https://tlon.io/privacy)
+- [X / Twitter](https://twitter.com/tloncorporation)
