@@ -1,5 +1,5 @@
 aid: tlon-corporation
-name: Tlon Corporation
+name: Tlon
 description: >-
   Tlon Corporation builds Tlon Messenger, a self-owned, self-hosted social
   messaging app that runs on the user's own Urbit ship, and Tlon Hosting, which
@@ -130,3 +130,4 @@ x-enrichment:
   status: enriched
   artifacts_added: 8
   pass: local-v1
+x-legal-name: Tlon Corporation
